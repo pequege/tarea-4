@@ -14,6 +14,9 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/960_12_col.css">
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/text.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
@@ -22,19 +25,116 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+        <div class="container_12 clearfix">
+            <div class="row">
+                <h1 class="zero_b">Historia Clínica</h1>
+            </div>
+            <div class="row">
+                <h2 class="zero_b">Datos filiatorios:</h2>
+            </div>
+            <div class="row">
+                <form action="/datosf" id="df" method="post">
+                    <label>Nombre: </label><input id="nombre" name="datosf[nombre]" type="text"><br>
+                    <label>Apellido: </label><input id="apellido" name="datosf[apellido]" type="text"><br>
+                    <label>Edad: </label><input id="edad" name="datosf[edad]" type="number" min="1" max="99">
+                    <label>Sexo: </label>
+                    <input id="sex" name="datosf[sex]" type="radio" value="F">Femenino
+                    <input id="sex" name="datosf[sex]" type="radio" value="M">Masculino<br>
+                    <label>Ocupación: </label><input id="ocupation" name="datosf[ocupation]" type="text">
+                    <label>Fecha de nacimiento: </label><input id="birth" name="datosf[birth]" type="date">
+                    <label>N° de historia clínica: </label><input id="historial-number" name="datosf[historial-number]" type="text"><br>
+                    <label >Estado civil: </label><select id="civil" name="datosf[civil]">
+                        <option value="n">---------</option>
+                        <option value="s">Soltero/a</option>
+                        <option value="c">Casado/a</option>
+                        <option value="d">Divorciado/a</option>
+                        <option value="v">Viudo/a</option>
+                    </select>
+                    <label>DNI: </label><input id="dni" name="datosf[dni]" type="text">
+                    <label>Nacionalidad: </label><input id="nac" name="datosf[nac]" type="text"><br>
+                    <label>Residencia actual<br>Calle: </label><input id="calle" name="datosf[calle]" type="text">
+                    <label>Número: </label><input id="calle-num" name="datosf[calle-num]" type="text">
+                    <label>Piso: </label><input id="calle-piso" name="datosf[calle-piso]" type="text"><br>
+                    <label>Residencia anterior<br>Calle: </label><input id="calle-a" name="datosf[calle-a]" type="text">
+                    <label>Número: </label><input id="calle-a-num" name="datosf[calle-a-num]" type="text">
+                    <label>Piso: </label><input id="calle-a-piso" name="datosf[calle-a-piso]" type="text"><br>
+                    <label><h6 class="zero_b">Motivo de consulta:</h5></label><br>
+                    <textarea id="motivo" name="datosf[motivo]"></textarea><br><br>
+                    <input name="save-datosf" type="submit" value="Guardar datos filiatorios">
+                </form>
+            </div>
+            <div class="row">
+                <h2 class="zero_b">Antecedentes</h2>
+            </div>
+            <div class="row">
+                <form action="/antecedentes" id="ant" method="post">
+                    <label>Antecedentes de enfermedad actual: </label><textarea id="ant-enf" name="datosf[ant-enf]"></textarea><br>
+                    <label><h5 class="zero_b">Antecedentes heredofamiliares</h5></label><br> 
+                    <label>Padre: </label><select>
+                        <option id="dad-v" name="datosf[dad-v]">Vivo</option>
+                        <option id="dad-d" name="datosf[dad-d]">Fallecido</option>
+                    </select>
+                    <label>Causas: </label><input id="Causas-dad" name="datosf[Causas-dad]" type="text">
+                    <label>Madre: </label><select>
+                        <option id="mom-v" name="datosf[mom-v]">Vivo</option>
+                        <option id="mom-d" name="datosf[mom-d]">Fallecido</option>
+                    </select>
+                    <label>Causas: </label><input id="Causas-mom" name="datosf[Causas-mom]" type="text"><br>
+                    <label>Hermanos: </label><select>
+                        <option id="bro-v" name="datosf[bro-v]">Vivo</option>
+                        <option id="bro-d" name="datosf[bro-d]">Fallecido</option>
+                    </select>
+                    <label>Causas: </label><input id="Causas-bro" name="datosf[Causas-bro]" type="text">
+                    <label>Hijos: </label><select>
+                        <option id="son-v" name="datosf[son-v]">Vivo</option>
+                        <option id="son-d" name="datosf[son-d]">Fallecido</option>
+                    </select>
+                    <label>Causas: </label><input id="Causas-son" name="datosf[Causas-son]" type="text"><br>
+                    <label>DBT: </label>
+                    <input type="checkbox" name="dbt" value="dbt">Si
+                    <br>
+                    <label>HTA: </label>
+                    <input type="checkbox" name="hta" value="hta">Si
+                    <br>
+                    <label>TBC: </label>
+                    <input type="checkbox" name="tbc" value="tbc">Si
+                    <br>
+                    <label>Gemelar: </label>
+                    <input type="checkbox" name="gemelar" value="gemelar">Si
+                    <br>
+                    <label><h5 class="zero_b">Antecedentes Personales</h5></label><br>
+                    <label><h6 class="zero_b">Hábitos tóxicos</h5></label><br>
+                    <label>Fuma: </label>
+                    <input type="checkbox" name="fuma" value="fuma">Si
+                    <br>
+                    <label>Consume drogas: </label>
+                    <input type="checkbox" name="drugs" value="drugs">Si
+                    <br>
+                    <label>Consume alcohol: </label>
+                    <input type="checkbox" name="alcohol" value="alcohol">Si
+                    <br>
+                    <label><h6 class="zero_b">Fisiológicos</h5></label><br>
+                    <label>Alimentación: </label><input id="alimentacion" name="datosf[alimentacion]" type="text"><br>
+                    <label>Dipsia: </label><input id="dipsia" name="datosf[dipsia]" type="text"><br>
+                    <label>Diuresis: </label><input id="diuresis" name="datosf[diuresis]" type="text"><br>
+                    <label>Catarsis: </label><input id="catarsis" name="datosf[alimentacion]" type="text"><br>
+                    <label>Somnia: </label><input id="somnia" name="datosf[somnia]" type="text"><br>
+                    <label>Otros: </label><input id="fisio-otros" name="datosf[fisio-otros]" type="text"><br><br>
+                    <input name="save-antecedentes" type="submit" value="Guardar antecedentes">
+                </form>
+            </div>
+        </div>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
+            e.src='https://www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X');ga('send','pageview');
         </script>

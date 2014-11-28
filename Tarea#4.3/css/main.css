@@ -308,17 +308,20 @@ textarea {
 }
 
 
+.mar{
+    margin-left: 1px;
+}
+
 .row{
     display: flex;
 }
 
-/*.star{
-    background-color: black;
-    color: white;
-}
-*/
 
 .star{
+    background-color: #ff6c00;
+    color: white;
+}
+.star .fav{
     color: #ffc600;
 }
 

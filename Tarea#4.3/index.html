@@ -28,68 +28,70 @@
         <div class="container_12 clearfix">
             <div class="row">
                 <div class="grid_3" id="product_1">
-                    <img src="img/product_1.jpg">
+                    <img src="img/product_1.jpg" class="mar">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
                     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
                     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <button id="fav"></button><button></button>
+                    <button class="fav"></button><button class="cart"></button>
                 </div>
                 <div class="grid_3" id="product_2">
-                    <img src="img/product_2.jpg">
+                    <img src="img/product_2.jpg" class="mar">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
                     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
                     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <button id="fav"></button><button></button>
+                    <button class="fav"></button class="cart"><button></button>
                 </div>
                 <div class="grid_3" id="product_3">
-                    <img src="img/product_3.jpg">
+                    <img src="img/product_3.jpg" class="mar">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
                     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
                     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <button id="fav"></button><button></button>
+                    <button class="fav"></button><button class="cart"></button>
                 </div>
                 <div class="grid_3" id="product_4">
-                    <img src="img/product_4.jpg">
+                    <img src="img/product_4.jpg" class="mar">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
                     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
                     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <button id="fav"></button><button></button>
+                    <button class="fav"></button><button class="cart"></button>
                 </div>
             </div>
         </div>
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-        <script src="js/jquery-1.11.1.min.js"></script>
-        <script src="js/jquery-1.11.1.js"></script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
+            e.src='https://www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X');ga('send','pageview');
         </script>
+        <!-- favoritos -->
         <script>
-        // $( "#fav" ).click(function() {
-        //    $( this ).toggleClass( ".star" );
-        // });
+        $( document ).ready(function() {
+            console.log( "document loaded" );
+        });
+
+        $( ".fav" ).click(function(){
+            $( this ).parent().toggleClass( "star" );
+            });
         </script>
+
     </body>
 </html>
